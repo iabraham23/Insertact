@@ -51,12 +51,15 @@
 
     <!-- Hero -->
     <section class="hero">
-      <div class="hero__bg" aria-hidden="true"></div>
-      <div class="container hero__inner center">
-        <h1 class="hero__title">Handle hard contact lenses<br><span class="grad-text">precisely and easily.</span></h1>
-        <div class="hero__actions hero__actions--center">
+      <div class="hero__media" aria-hidden="true">
+        <img class="hero__img" src="images/hero.jpg" alt="" />
+        <div class="hero__scrim"></div>
+      </div>
+      <div class="container hero__inner">
+        <h1 class="hero__title">Handle hard contact lenses<br>precisely and easily.</h1>
+        <div class="hero__actions">
           <a class="btn btn--primary" href="#waitlist">Join the waitlist</a>
-          <a class="btn btn--ghost" href="#how">See how it works <span aria-hidden="true">→</span></a>
+          <a class="btn btn--light" href="#how">See how it works <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
@@ -89,19 +92,34 @@
           </div>
         </div>
 
-        <!-- Struggles + image placeholder -->
-        <div class="problem__grid">
-          <div class="struggles" data-reveal>
-            <h3 class="struggles__title">The struggle is real</h3>
-            <ul class="ticks">
-              <li>Fear of touching and poking the eye</li>
-              <li>Scratching the cornea from incorrect insertion or removal</li>
-              <li>Hour-long practice appointments that are traumatic for kids and parents</li>
-              <li>Hardest for children, the elderly, and anyone with limited dexterity</li>
-            </ul>
+        <!-- Struggle rows (image-led) -->
+        <div class="srows">
+          <div class="srow" data-reveal>
+            <div class="srow__media">
+              <img src="images/struggle-child.png" alt="A child struggling to insert a hard contact lens by hand" loading="lazy" />
+            </div>
+            <div class="srow__text">
+              <h3>It starts young</h3>
+              <p>Children often can't insert or remove hard lenses on their own — and it's frightening.</p>
+              <ul class="ticks">
+                <li>Fear of touching and poking the eye</li>
+                <li>Scratching the cornea from incorrect insertion or removal</li>
+              </ul>
+            </div>
           </div>
-          <div class="media-ph media-ph--tall" data-reveal aria-hidden="true">
-            <span class="media-ph__label">Image coming soon</span>
+
+          <div class="srow srow--rev" data-reveal>
+            <div class="srow__media">
+              <img src="images/struggle-senior.png" alt="An older adult inserting a contact lens by hand" loading="lazy" />
+            </div>
+            <div class="srow__text">
+              <h3>And it doesn't get easier</h3>
+              <p>Elderly users and anyone with limited dexterity face the same daily fight.</p>
+              <ul class="ticks">
+                <li>Hour-long practice appointments that are traumatic for families</li>
+                <li>Hardest for those with limited mobility or dexterity</li>
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -125,8 +143,8 @@
         </header>
 
         <div class="product">
-          <div class="media-ph media-ph--tall" data-reveal aria-hidden="true">
-            <span class="media-ph__label">Product image coming soon</span>
+          <div class="product__media" data-reveal>
+            <img src="images/product.png" alt="The Insertact device beside a contact lens case" loading="lazy" />
           </div>
 
           <div class="features features--3" data-reveal>
