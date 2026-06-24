@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Team | Insertact</title>
+  <meta name="description" content="Meet the team behind Insertact, a precision-guided device for handling hard contact lenses." />
+  <link rel="icon" type="image/png" href="images/logo_removedbg.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Announcement -->
+  <div class="announce" role="note">
+    <span class="announce__dot" aria-hidden="true"></span>
+    Now in development. Join the waitlist for early access.
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="Insertact home">
+        <img class="brand__mark" src="images/logo_removedbg.png" alt="" aria-hidden="true" />
+        <span class="brand__word"><span class="brand__a">INSERT</span><span class="brand__b">ACT</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html#problem">The problem</a>
+        <a href="index.html#product">The product</a>
+        <a href="index.html#how">How it works</a>
+        <a href="team.html" aria-current="page">Team</a>
+        <a class="btn btn--primary btn--sm" href="index.html#waitlist">Join the waitlist</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Team -->
+    <section class="section" id="team">
+      <div class="container">
+        <header class="section__head center" data-reveal>
+          <p class="eyebrow">The team</p>
+          <h2 class="section__title">Meet the people behind Insertact.</h2>
+        </header>
+
+        <div class="team-grid">
+          <article class="member" data-reveal>
+            <div class="member__photo">
+              <img src="images/team-ishan.jpg" alt="Ishan Abraham" style="object-position: 68% center;" loading="lazy" />
+            </div>
+            <h3 class="member__name">Ishan Abraham</h3>
+            <p class="member__role">Graduated from Lewis &amp; Clark College with Honors in Mathematics &amp; Computer Science.</p>
+          </article>
+
+          <article class="member" data-reveal>
+            <div class="member__photo">
+              <img src="images/team-thoan.png" alt="Thoan Nguyen" loading="lazy" />
+            </div>
+            <h3 class="member__name">Thoan Nguyen</h3>
+            <p class="member__role">Student at Lewis &amp; Clark College studying Mathematics &amp; Computer Science.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="index.html" aria-label="Insertact home">
+          <img class="brand__mark" src="images/logo_removedbg.png" alt="" aria-hidden="true" />
+          <span class="brand__word brand__word--light"><span class="brand__a">INSERT</span><span class="brand__b">ACT</span></span>
+        </a>
+        <p class="footer__tag">Precision handling for hard contact lenses. Finger-free, and built for everyone who finds lenses hard to manage.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Explore</h4>
+        <nav class="footer__nav" aria-label="Footer">
+          <a href="index.html#problem">The problem</a>
+          <a href="index.html#product">The product</a>
+          <a href="index.html#how">How it works</a>
+          <a href="team.html">Team</a>
+          <a href="index.html#waitlist">Waitlist</a>
+        </nav>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Get in touch</h4>
+        <a class="footer__contact" href="mailto:thoannguyen@lclark.edu" aria-label="Contact us by email">
+          <span class="footer__contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="5" width="18" height="14" rx="2"/>
+              <path d="m3 7 9 6 9-6"/>
+            </svg>
+          </span>
+          Contact us
+        </a>
+        <a class="btn btn--primary btn--sm footer__cta" href="index.html#waitlist">Join the waitlist</a>
+      </div>
+    </div>
+
+    <div class="container footer__legal">
+      <p>© <span id="year">2026</span> Insertact Eye Care. All rights reserved.</p>
+      <p class="footer__disclaimer">Insertact is in development and not yet available for purchase. This product is not a substitute for professional eye-care advice.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Reveal on scroll (respects reduced motion)
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduce && 'IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('[data-reveal]').forEach((el) => io.observe(el));
+    } else {
+      document.querySelectorAll('[data-reveal]').forEach((el) => el.classList.add('is-in'));
+    }
+  </script>
+</body>
+</html>
