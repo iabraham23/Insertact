@@ -210,14 +210,14 @@
     <!-- Waitlist CTA -->
     <section class="section waitlist" id="waitlist">
       <div class="container narrow center" data-reveal>
-        <h2 class="section__title">Be first in line.</h2>
-        <p class="lead">Insertact is in development. Join the waitlist for launch updates, early access, and a founding-member offer.</p>
+        <h2 class="section__title">Join Our Waitlist.</h2>
+        <p class="lead">Insertact is in development. Join the waitlist for launch updates, early access, and more information.</p>
         <form class="signup" action="#" method="post" novalidate>
           <label class="visually-hidden" for="email">Email address</label>
           <input class="signup__input" type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
           <button class="btn btn--primary" type="submit">Notify me</button>
         </form>
-        <p class="signup__fineprint">No spam. We'll only email you about the launch.</p>
+        
       </div>
     </section>
 
@@ -225,21 +225,40 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container footer__inner">
+    <div class="container footer__grid">
       <div class="footer__brand">
         <a class="brand" href="#top" aria-label="Insertact home">
           <img class="brand__mark" src="images/logo_removedbg.png" alt="" aria-hidden="true" />
           <span class="brand__word brand__word--light"><span class="brand__a">INSERT</span><span class="brand__b">ACT</span></span>
         </a>
-        <p class="footer__tag">Precision contact-lens handling.</p>
+        <p class="footer__tag">Precision handling for hard contact lenses. Finger-free, and built for everyone who finds hard contacts hard to manage.</p>
       </div>
-      <nav class="footer__nav" aria-label="Footer">
-        <a href="#problem">The problem</a>
-        <a href="#product">The product</a>
-        <a href="#how">How it works</a>
-        <a href="#waitlist">Waitlist</a>
-      </nav>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Explore</h4>
+        <nav class="footer__nav" aria-label="Footer">
+          <a href="#problem">The problem</a>
+          <a href="#product">The product</a>
+          <a href="#how">How it works</a>
+          <a href="#waitlist">Waitlist</a>
+        </nav>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Get in touch</h4>
+        <a class="footer__contact" href="mailto:thoannguyen@lclark.edu" aria-label="Contact us by email">
+          <span class="footer__contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="5" width="18" height="14" rx="2"/>
+              <path d="m3 7 9 6 9-6"/>
+            </svg>
+          </span>
+          Contact us
+        </a>
+        <a class="btn btn--primary btn--sm footer__cta" href="#waitlist">Join the waitlist</a>
+      </div>
     </div>
+
     <div class="container footer__legal">
       <p>© <span id="year">2026</span> Insertact Eye Care. All rights reserved.</p>
       <p class="footer__disclaimer">Insertact is in development and not yet available for purchase. This product is not a substitute for professional eye-care advice.</p>
