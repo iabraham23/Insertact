@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Insertact — Finger-free handling for hard contact lenses</title>
-  <meta name="description" content="Insertact is a precision-guided device that inserts and removes hard contact lenses — RGP, Ortho-K, and scleral — without touching your eye. Now pre-launch." />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <title>Insertact | Finger-free handling for hard contact lenses</title>
+  <meta name="description" content="Insertact is a precision-guided device that inserts and removes hard contact lenses (RGP, Ortho-K, and scleral) without touching your eye. Now pre-launch." />
+  <link rel="icon" type="image/png" href="images/logo_removedbg.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -17,31 +17,21 @@
   <!-- Announcement -->
   <div class="announce" role="note">
     <span class="announce__dot" aria-hidden="true"></span>
-    Now in development — join the waitlist for early access.
+    Now in development. Join the waitlist for early access.
   </div>
 
   <!-- Header -->
   <header class="header" id="top">
     <div class="container header__inner">
       <a class="brand" href="#top" aria-label="Insertact home">
-        <svg class="brand__mark" width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-          <defs>
-            <linearGradient id="brandGrad" x1="2" y1="6" x2="38" y2="34" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#2563EB"/><stop offset="1" stop-color="#22D3EE"/>
-            </linearGradient>
-          </defs>
-          <path d="M3 20C9 10 31 10 37 20C31 30 9 30 3 20Z" fill="none" stroke="url(#brandGrad)" stroke-width="2.4" stroke-linejoin="round"/>
-          <circle cx="20" cy="20" r="7.4" fill="none" stroke="url(#brandGrad)" stroke-width="2.4"/>
-          <circle cx="20" cy="20" r="2.7" fill="url(#brandGrad)"/>
-          <path d="M34 5.5L35.05 8.2L37.75 9.25L35.05 10.3L34 13L32.95 10.3L30.25 9.25L32.95 8.2L34 5.5Z" fill="url(#brandGrad)"/>
-        </svg>
+        <img class="brand__mark" src="images/logo_removedbg.png" alt="" aria-hidden="true" />
         <span class="brand__word"><span class="brand__a">INSERT</span><span class="brand__b">ACT</span></span>
       </a>
 
       <nav class="nav" aria-label="Primary">
+        <a href="#problem">The problem</a>
+        <a href="#product">The product</a>
         <a href="#how">How it works</a>
-        <a href="#why">Why Insertact</a>
-        <a href="#specs">Specs</a>
         <a class="btn btn--primary btn--sm" href="#waitlist">Join the waitlist</a>
       </nav>
     </div>
@@ -51,147 +41,183 @@
 
     <!-- Hero -->
     <section class="hero">
-      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__media" aria-hidden="true">
+        <img class="hero__img" src="images/hero.jpg" alt="" />
+        <div class="hero__scrim"></div>
+      </div>
       <div class="container hero__inner">
-        <p class="eyebrow">Precision eye-care tooling</p>
-        <h1 class="hero__title">Handle hard contact lenses<br><span class="grad-text">without touching your eye.</span></h1>
-        <p class="hero__sub">Insertact is a precision-guided device built for the lenses fingers and ordinary tools struggle with — rigid (RGP), Ortho-K, and scleral. It stabilizes the eyelid and places or lifts the lens in one controlled motion.</p>
+        <h1 class="hero__title">Handle hard contact lenses<br>precisely and easily.</h1>
         <div class="hero__actions">
           <a class="btn btn--primary" href="#waitlist">Join the waitlist</a>
-          <a class="btn btn--ghost" href="#how">See how it works <span aria-hidden="true">→</span></a>
+          <a class="btn btn--light" href="#how">See how it works <span aria-hidden="true">→</span></a>
         </div>
-        <p class="hero__note">Built for RGP, Ortho-K &amp; scleral lens wearers · Pre-launch</p>
       </div>
     </section>
 
-    <!-- Problem / Positioning -->
-    <section class="section problem">
-      <div class="container narrow center" data-reveal>
-        <h2 class="section__title">Hard lenses deserve better than fingertips.</h2>
-        <p class="lead">RGP, Ortho-K, and scleral lenses are unforgiving — they resist placement, and a single drop can mean breakage and a $1,000–$2,000 replacement. Most aids on the market are made for soft lenses and still leave you holding your own eyelids open. Insertact is purpose-built for high-stakes lenses: it stabilizes the eyelid and guides the lens to the cornea in one motion.</p>
+    <!-- Problem -->
+    <section class="section problem" id="problem">
+      <div class="container">
+        <header class="section__head center" data-reveal>
+          <p class="eyebrow">The problem</p>
+          <h2 class="section__title">Inserting and removing hard contact lenses<br>shouldn't be difficult.</h2>
+        </header>
+
+        <!-- Stats -->
+        <div class="stats" data-reveal>
+          <div class="stat">
+            <span class="stat__num">7.5M+</span>
+            <span class="stat__label">people in the US wear hard contact lenses</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">3 in 10</span>
+            <span class="stat__label">patients give up on hard lenses</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">80%</span>
+            <span class="stat__label">report high difficulty inserting or removing lenses, due to fear</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">11%</span>
+            <span class="stat__label">scratched their eyes during insertion or removal</span>
+          </div>
+        </div>
+
+        <!-- Struggle rows (image-led) -->
+        <div class="srows">
+          <div class="srow" data-reveal>
+            <div class="srow__media">
+              <img src="images/struggle-child.png" alt="A child struggling to insert a hard contact lens by hand" loading="lazy" />
+            </div>
+            <div class="srow__text">
+              <h3>First-time users</h3>
+              <p>Getting started is the hardest part. The eye fights back, blinking and watering the moment a finger comes close. Lenses get dropped, flipped, or scratched against the cornea. It often takes hour-long appointments just to learn, and many people give up before it ever feels natural.</p>
+            </div>
+          </div>
+
+          <div class="srow srow--rev" data-reveal>
+            <div class="srow__media">
+              <img src="images/struggle-senior.png" alt="An older adult inserting a contact lens by hand" loading="lazy" />
+            </div>
+            <div class="srow__text">
+              <h3>Limited mobility</h3>
+              <p>Steady hands are not a given. Arthritis, tremors, and weak grip make it nearly impossible to pinch a tiny lens and hold the eyelid open at the same time. For many, that means leaning on a caregiver every day, or giving up on hard lenses altogether.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quote -->
+        <figure class="quote" data-reveal>
+          <blockquote>
+            "So far we (parents and daughter) have had appointments to practice getting them in and out. Both have been over an hour and very traumatic for her and us."
+          </blockquote>
+          <figcaption>— A parent of a child who wears hard contact lenses</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- The product -->
+    <section class="section section--muted" id="product">
+      <div class="container">
+        <header class="section__head center" data-reveal>
+          <p class="eyebrow">The product</p>
+          <h2 class="section__title">All about Insertact.</h2>
+          <p class="lead narrow center">A precision-guided device that inserts and removes hard contact lenses in one smooth motion. No fingers. No fear.</p>
+        </header>
+
+        <div class="product">
+          <div class="product__media" data-reveal>
+            <img src="images/product_removedbg.png" alt="The Insertact device prototype" loading="lazy" />
+          </div>
+
+          <div class="features features--3" data-reveal>
+            <article class="feature">
+              <span class="feature__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m12 2 9 5-9 5-9-5 9-5Z"/>
+                  <path d="m3 12 9 5 9-5"/>
+                  <path d="m3 17 9 5 9-5"/>
+                </svg>
+              </span>
+              <h3>Works with every hard lens</h3>
+              <p>One tool for RGP, Ortho-K, and scleral lenses.</p>
+            </article>
+            <article class="feature">
+              <span class="feature__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+                  <path d="m9 12 2 2 4-4"/>
+                </svg>
+              </span>
+              <h3>100% finger-free</h3>
+              <p>Your fingers never touch your eye or the lens.</p>
+            </article>
+            <article class="feature">
+              <span class="feature__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="9"/>
+                  <circle cx="12" cy="12" r="4.5"/>
+                  <circle cx="12" cy="12" r="1"/>
+                </svg>
+              </span>
+              <h3>Precise</h3>
+              <p>Places and removes each lens accurately, every time.</p>
+            </article>
+            <article class="feature">
+              <span class="feature__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="6" y="2" width="12" height="20" rx="3"/>
+                  <path d="M11 6h2"/>
+                </svg>
+              </span>
+              <h3>Portable</h3>
+              <p>Lightweight and compact. Take it anywhere.</p>
+            </article>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- How it works -->
     <section class="section" id="how">
       <div class="container">
-        <header class="section__head center">
+        <header class="section__head center" data-reveal>
           <p class="eyebrow">How it works</p>
-          <h2 class="section__title">Three controlled steps.</h2>
+          <h2 class="section__title">Three simple steps.</h2>
         </header>
-        <ol class="steps">
-          <li class="step card" data-reveal>
-            <span class="step__num">01</span>
-            <h3 class="step__title">Stabilize the lids</h3>
-            <p>Integrated eyelid stabilization holds the eye open for you — no free hand required, even for kids or limited dexterity.</p>
+        <ol class="steps steps--photo">
+          <li class="pstep" data-reveal>
+            <figure class="pstep__fig">
+              <img class="pstep__img" src="images/step-1-pickup.png" alt="The Insertact device lifting a hard contact lens from its case" loading="lazy" />
+            </figure>
+            <figcaption class="pstep__cap"><span class="pstep__num">1</span> Pick up the lens from the case</figcaption>
           </li>
-          <li class="step card" data-reveal>
-            <span class="step__num">02</span>
-            <h3 class="step__title">Place with precision</h3>
-            <p>A precision suction mechanism secures the lens and guides it onto the cornea, overcoming the eye's natural reflexes.</p>
+          <li class="pstep" data-reveal>
+            <figure class="pstep__fig">
+              <img class="pstep__img" src="images/step-2-place.png" alt="The Insertact device placed against the eye" loading="lazy" />
+            </figure>
+            <figcaption class="pstep__cap"><span class="pstep__num">2</span> Place the device against the eye</figcaption>
           </li>
-          <li class="step card" data-reveal>
-            <span class="step__num">03</span>
-            <h3 class="step__title">Remove the same way</h3>
-            <p>The same controlled motion lifts the lens back out at any angle — one device for the full routine, finger-free.</p>
+          <li class="pstep" data-reveal>
+            <figure class="pstep__fig">
+              <img class="pstep__img" src="images/step-3-insert.png" alt="Opening the handle of the Insertact device to insert the lens" loading="lazy" />
+            </figure>
+            <figcaption class="pstep__cap"><span class="pstep__num">3</span> Open the handle to insert the lens</figcaption>
           </li>
         </ol>
-      </div>
-    </section>
-
-    <!-- Why Insertact -->
-    <section class="section section--muted" id="why">
-      <div class="container">
-        <header class="section__head center">
-          <p class="eyebrow">Why Insertact</p>
-          <h2 class="section__title">Designed around the eye, engineered for control.</h2>
-        </header>
-        <div class="features">
-          <article class="feature card" data-reveal>
-            <span class="feature__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
-                <path d="m9 12 2 2 4-4"/>
-              </svg>
-            </span>
-            <h3>Finger-free &amp; hygienic</h3>
-            <p>Keep fingertips and bacteria away from the eye and the lens surface throughout insertion and removal.</p>
-          </article>
-          <article class="feature card" data-reveal>
-            <span class="feature__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M2.06 12.35a1 1 0 0 1 0-.7 10.75 10.75 0 0 1 19.88 0 1 1 0 0 1 0 .7 10.75 10.75 0 0 1-19.88 0"/>
-                <circle cx="12" cy="12" r="3"/>
-              </svg>
-            </span>
-            <h3>Eyelid stabilization</h3>
-            <p>Holds the eye open and places the lens in one device — no juggling separate openers, holders, and fingers.</p>
-          </article>
-          <article class="feature card" data-reveal>
-            <span class="feature__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="9"/>
-                <circle cx="12" cy="12" r="4.5"/>
-                <circle cx="12" cy="12" r="1"/>
-              </svg>
-            </span>
-            <h3>Precision suction</h3>
-            <p>Securely holds the lens for insertion and removal at any angle — without dropping, scratching, or damaging it.</p>
-          </article>
-          <article class="feature card" data-reveal>
-            <span class="feature__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m12 2 9 5-9 5-9-5 9-5Z"/>
-                <path d="m3 12 9 5 9-5"/>
-                <path d="m3 17 9 5 9-5"/>
-              </svg>
-            </span>
-            <h3>Made for hard lenses</h3>
-            <p>Purpose-built for RGP, Ortho-K, and scleral lenses — the high-value, high-stakes lenses that demand precise handling.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Specs -->
-    <section class="section" id="specs">
-      <div class="container">
-        <header class="section__head center">
-          <p class="eyebrow">At a glance</p>
-          <h2 class="section__title">Designed for the hard stuff.</h2>
-        </header>
-        <dl class="specs" data-reveal>
-          <div class="spec">
-            <dt>Lens compatibility</dt>
-            <dd>Hard lenses — RGP, Ortho-K &amp; scleral</dd>
-          </div>
-          <div class="spec">
-            <dt>Mechanism</dt>
-            <dd>Precision suction with integrated eyelid stabilization</dd>
-          </div>
-          <div class="spec">
-            <dt>In use</dt>
-            <dd>Insert &amp; remove in one controlled motion, finger-free</dd>
-          </div>
-          <div class="spec">
-            <dt>Form factor</dt>
-            <dd>Compact &amp; portable — carry it anywhere</dd>
-          </div>
-        </dl>
       </div>
     </section>
 
     <!-- Waitlist CTA -->
     <section class="section waitlist" id="waitlist">
       <div class="container narrow center" data-reveal>
-        <h2 class="section__title">Be first in line.</h2>
-        <p class="lead">Insertact is in development. Join the waitlist for launch updates, early access, and a founding-member offer.</p>
+        <h2 class="section__title">Join Our Waitlist.</h2>
+        <p class="lead">Insertact is in development. Join the waitlist for launch updates, early access, and more information.</p>
         <form class="signup" action="#" method="post" novalidate>
           <label class="visually-hidden" for="email">Email address</label>
           <input class="signup__input" type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
           <button class="btn btn--primary" type="submit">Notify me</button>
         </form>
-        <p class="signup__fineprint">No spam. We'll only email you about the launch.</p>
+        
       </div>
     </section>
 
@@ -199,31 +225,40 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container footer__inner">
+    <div class="container footer__grid">
       <div class="footer__brand">
         <a class="brand" href="#top" aria-label="Insertact home">
-          <svg class="brand__mark" width="30" height="30" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-            <defs>
-              <linearGradient id="footGrad" x1="2" y1="6" x2="38" y2="34" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#2563EB"/><stop offset="1" stop-color="#22D3EE"/>
-              </linearGradient>
-            </defs>
-            <path d="M3 20C9 10 31 10 37 20C31 30 9 30 3 20Z" fill="none" stroke="url(#footGrad)" stroke-width="2.4" stroke-linejoin="round"/>
-            <circle cx="20" cy="20" r="7.4" fill="none" stroke="url(#footGrad)" stroke-width="2.4"/>
-            <circle cx="20" cy="20" r="2.7" fill="url(#footGrad)"/>
-            <path d="M34 5.5L35.05 8.2L37.75 9.25L35.05 10.3L34 13L32.95 10.3L30.25 9.25L32.95 8.2L34 5.5Z" fill="url(#footGrad)"/>
-          </svg>
+          <img class="brand__mark" src="images/logo_removedbg.png" alt="" aria-hidden="true" />
           <span class="brand__word brand__word--light"><span class="brand__a">INSERT</span><span class="brand__b">ACT</span></span>
         </a>
-        <p class="footer__tag">Precision contact-lens handling.</p>
+        <p class="footer__tag">Precision handling for hard contact lenses. Finger-free, and built for everyone who finds hard contacts hard to manage.</p>
       </div>
-      <nav class="footer__nav" aria-label="Footer">
-        <a href="#how">How it works</a>
-        <a href="#why">Why Insertact</a>
-        <a href="#specs">Specs</a>
-        <a href="#waitlist">Waitlist</a>
-      </nav>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Explore</h4>
+        <nav class="footer__nav" aria-label="Footer">
+          <a href="#problem">The problem</a>
+          <a href="#product">The product</a>
+          <a href="#how">How it works</a>
+          <a href="#waitlist">Waitlist</a>
+        </nav>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Get in touch</h4>
+        <a class="footer__contact" href="mailto:thoannguyen@lclark.edu" aria-label="Contact us by email">
+          <span class="footer__contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="5" width="18" height="14" rx="2"/>
+              <path d="m3 7 9 6 9-6"/>
+            </svg>
+          </span>
+          Contact us
+        </a>
+        <a class="btn btn--primary btn--sm footer__cta" href="#waitlist">Join the waitlist</a>
+      </div>
     </div>
+
     <div class="container footer__legal">
       <p>© <span id="year">2026</span> Insertact Eye Care. All rights reserved.</p>
       <p class="footer__disclaimer">Insertact is in development and not yet available for purchase. This product is not a substitute for professional eye-care advice.</p>
