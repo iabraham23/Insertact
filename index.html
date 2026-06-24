@@ -210,14 +210,26 @@
     <!-- Waitlist CTA -->
     <section class="section waitlist" id="waitlist">
       <div class="container narrow center" data-reveal>
-        <h2 class="section__title">Join Our Waitlist.</h2>
+        <h2 class="section__title">Join our waitlist.</h2>
         <p class="lead">Insertact is in development. Join the waitlist for launch updates, early access, and more information.</p>
-        <form class="signup" action="#" method="post" novalidate>
-          <label class="visually-hidden" for="email">Email address</label>
-          <input class="signup__input" type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
-          <button class="btn btn--primary" type="submit">Notify me</button>
+        <form class="signup" id="waitlist-form" novalidate>
+          <div class="signup__row">
+            <div class="signup__field">
+              <label class="visually-hidden" for="firstName">First name</label>
+              <input class="signup__input" type="text" id="firstName" name="firstName" placeholder="First name" autocomplete="given-name" required />
+            </div>
+            <div class="signup__field">
+              <label class="visually-hidden" for="lastName">Last name</label>
+              <input class="signup__input" type="text" id="lastName" name="lastName" placeholder="Last name" autocomplete="family-name" required />
+            </div>
+          </div>
+          <div class="signup__field">
+            <label class="visually-hidden" for="email">Email address</label>
+            <input class="signup__input" type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+          </div>
+          <button class="btn btn--primary signup__submit" type="submit">Join the waitlist</button>
         </form>
-        
+        <p class="signup__status" id="waitlist-status" role="status" aria-live="polite"></p>
       </div>
     </section>
 
@@ -280,6 +292,51 @@
       document.querySelectorAll('[data-reveal]').forEach((el) => io.observe(el));
     } else {
       document.querySelectorAll('[data-reveal]').forEach((el) => el.classList.add('is-in'));
+    }
+
+    // ---- Waitlist signup ----
+    // Paste the Web app URL from your Google Apps Script deployment below.
+    const WAITLIST_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzwl_7NrS4s1F54uJdDGxJfpKHze5KDtbHgrmjRAR6YCBMiEsGSoNh74LBACNjkjuM/exec';
+
+    const wlForm = document.getElementById('waitlist-form');
+    const wlStatus = document.getElementById('waitlist-status');
+    if (wlForm) {
+      wlForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (!wlForm.reportValidity()) return;
+
+        const btn = wlForm.querySelector('button[type="submit"]');
+        const original = btn.textContent;
+        const setStatus = (msg, kind) => {
+          wlStatus.textContent = msg;
+          wlStatus.className = 'signup__status' + (kind ? ' signup__status--' + kind : '');
+        };
+
+        if (WAITLIST_ENDPOINT.startsWith('PASTE_')) {
+          setStatus('Form not connected yet. Add your Google Apps Script URL to enable signups.', 'err');
+          return;
+        }
+
+        btn.disabled = true;
+        btn.textContent = 'Joining…';
+        setStatus('', '');
+
+        try {
+          await fetch(WAITLIST_ENDPOINT, {
+            method: 'POST',
+            mode: 'no-cors',
+            body: new FormData(wlForm)
+          });
+          // no-cors gives an opaque response we can't read, so treat a completed request as success
+          wlForm.reset();
+          setStatus("Thank you for joining our waitlist!.", 'ok');
+        } catch (err) {
+          setStatus('Something went wrong. Please try again, or email us.', 'err');
+        } finally {
+          btn.disabled = false;
+          btn.textContent = original;
+        }
+      });
     }
   </script>
 </body>
