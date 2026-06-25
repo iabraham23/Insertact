@@ -337,6 +337,13 @@ button, input { font: inherit; color: inherit; }
   color: var(--navy); margin-bottom: 8px;
 }
 .member__role { color: var(--fg-soft); font-size: 1rem; max-width: 30ch; margin-inline: auto; }
+.member__linkedin {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 14px;
+  font-family: var(--font-display); font-weight: 600; font-size: 0.95rem;
+  color: var(--blue); transition: color .15s ease;
+}
+.member__linkedin svg { width: 18px; height: 18px; }
+.member__linkedin:hover { color: var(--blue-700); }
 
 /* ---------- How it works — photo steps ---------- */
 .steps--photo { gap: 28px; }
